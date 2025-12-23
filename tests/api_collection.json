@@ -1,0 +1,37 @@
+{
+	"info": {
+		"name": "JDK21 App API Tests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Health Check Greet",
+			"request": {
+				"method": "GET",
+				"url": {
+					"raw": "http://localhost:8080/api/greet?name=DevOps",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "8080",
+					"path": ["api", "greet"],
+					"query": [{ "key": "name", "value": "DevOps" }]
+				}
+			},
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test('Status is 200', function () { pm.response.to.have.status(200); });",
+							"pm.test('Message contains DevOps', function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.message).to.eql('Hello, DevOps!');",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			]
+		}
+	]
+}
