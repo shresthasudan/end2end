@@ -9,10 +9,10 @@ pipeline {
     environment {
         // --- CONFIGURATION ---
         NEXUS_REGISTRY = 'registry.nchldemo.com'
-        IMAGE_NAME     = 'e2e-app-trainer'
+        IMAGE_NAME     = 'e2e-app-sapanaji'
         NEXUS_CRED     = 'nexus-auth'
-        CONTAINER_NAME = 'e2e-app-trainer'
-        APP_PORT       = '9091' // Add your unique port here
+        CONTAINER_NAME = 'e2e-app-sapanaji'
+        APP_PORT       = '8089' // Add your unique port here
     }
 
     tools {
