@@ -16,7 +16,7 @@ public class DemoApplication {
     @GetMapping("/")
     public String home() {
         return "<html><head><title>Home</title></head><body>" +
-               "<h1 id='welcome-message'>Welcome to the Sapana Jo App</h1>" +
+               "<h1 id='welcome-message'>Welcome to the JDK 21 App</h1>" +
                "<p>Version: 1.0.0</p>" +
                "</body></html>";
     }
